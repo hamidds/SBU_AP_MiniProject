@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+
+<AnchorPane prefHeight="577.0" prefWidth="977.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.Bank">
+   <children>
+      <JFXButton layoutX="237.0" layoutY="396.0" onAction="#increase" prefHeight="51.0" prefWidth="131.0" style="-fx-background-color: #326eb8;" text="Increase" textFill="WHITE" />
+      <JFXTextField fx:id="card" labelFloat="true" layoutX="181.0" layoutY="126.0" prefHeight="43.0" prefWidth="243.0" promptText="Card" unFocusColor="#4059a9" />
+      <JFXTextField fx:id="password" labelFloat="true" layoutX="181.0" layoutY="215.0" prefHeight="43.0" prefWidth="243.0" promptText="Password" unFocusColor="#4059a9" />
+      <JFXTextField fx:id="price" labelFloat="true" layoutX="181.0" layoutY="295.0" prefHeight="43.0" prefWidth="243.0" promptText="Price" unFocusColor="#4059a9" />
+      <JFXButton layoutX="74.0" layoutY="74.0" onAction="#back" prefHeight="61.0" prefWidth="54.0" ripplerFill="WHITESMOKE" text=" ">
+         <graphic>
+            <FontAwesomeIconView glyphName="ARROW_CIRCLE_LEFT" size="50" text="" wrappingWidth="47.0" />
+         </graphic>
+      </JFXButton>
+      <JFXTextField fx:id="cardNumber" labelFloat="true" layoutX="580.0" layoutY="126.0" prefHeight="43.0" prefWidth="243.0" promptText="Card Number" unFocusColor="#4059a9" />
+      <JFXTextField fx:id="cardPassword" labelFloat="true" layoutX="580.0" layoutY="215.0" prefHeight="43.0" prefWidth="243.0" promptText="Password" unFocusColor="#4059a9" />
+      <JFXButton layoutX="636.0" layoutY="291.0" onAction="#add" prefHeight="51.0" prefWidth="131.0" style="-fx-background-color: #326eb8;" text="Add" textFill="WHITE" />
+   </children>
+</AnchorPane>

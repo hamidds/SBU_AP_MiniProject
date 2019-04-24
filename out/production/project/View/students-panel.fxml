@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="577.0" prefWidth="977.0" style="-fx-background-color: #eaeaea;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.studentsPanelController">
+   <children>
+      <VBox layoutX="687.0" layoutY="66.0" prefHeight="445.0" prefWidth="174.0">
+         <children>
+            <JFXButton fx:id="bankButton" onAction="#bankEnter" prefHeight="110.0" prefWidth="170.0" stylesheets="@Styles/Buttons.css" text=" Bank">
+               <graphic>
+                  <FontAwesomeIconView glyphName="CREDIT_CARD_ALT" size="40" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="settingButton" onAction="#settingEnter" prefHeight="110.0" prefWidth="170.0" stylesheets="@Styles/Buttons.css" text=" Setting">
+               <graphic>
+                  <FontAwesomeIconView glyphName="COG" size="50" />
+               </graphic>
+            </JFXButton>
+            <JFXButton onAction="#bookList" prefHeight="110.0" prefWidth="170.0" stylesheets="@Styles/Buttons.css" text=" BookList">
+               <graphic>
+                  <FontAwesomeIconView glyphName="SUITCASE" size="50" />
+               </graphic>
+            </JFXButton>
+            <JFXButton onAction="#logout" prefHeight="110.0" prefWidth="170.0" stylesheets="@Styles/Cancel-Buttons.css" text=" Log out">
+               <graphic>
+                  <FontAwesomeIconView glyphName="TIMES_CIRCLE" size="50" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </VBox>
+      <VBox layoutX="513.0" layoutY="66.0" prefHeight="445.0" prefWidth="174.0">
+         <children>
+            <JFXButton fx:id="foodButton" onAction="#foodSystemEnter" prefHeight="110.0" prefWidth="170.0" stylesheets="@Styles/Buttons.css" text=" Food System">
+               <graphic>
+                  <FontAwesomeIconView glyphName="SHOPPING_BASKET" size="50" text="" wrappingWidth="56.14285659790039" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="classesButton" onAction="#ClassEnter" prefHeight="110.0" prefWidth="170.0" stylesheets="@Styles/Buttons.css" text="Class">
+               <graphic>
+                  <FontAwesomeIconView glyphName="GRADUATION_CAP" size="50" />
+               </graphic>
+            </JFXButton>
+            <JFXButton fx:id="libraryButton" onAction="#libraryEnter" prefHeight="110.0" prefWidth="170.0" stylesheets="@Styles/Buttons.css" text=" Library">
+               <graphic>
+                  <FontAwesomeIconView glyphName="BOOK" size="50" />
+               </graphic>
+            </JFXButton>
+            <JFXButton onAction="#classList" prefHeight="110.0" prefWidth="170.0" stylesheets="@Styles/Buttons.css" text=" ClassList">
+               <graphic>
+                  <FontAwesomeIconView glyphName="LIST_UL" size="45" text="" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </VBox>
+      <AnchorPane layoutX="85.0" layoutY="57.0" prefHeight="445.0" prefWidth="355.0" style="-fx-background-color: #c5c5c5;">
+         <children>
+            <ImageView fitHeight="150.0" fitWidth="200.0" layoutX="103.0" layoutY="26.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/user.png" />
+               </image>
+            </ImageView>
+            <VBox layoutX="14.0" layoutY="204.0" prefHeight="200.0" prefWidth="251.0">
+               <children>
+                  <Label fx:id="nameLabel">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="markLabel">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="creditLabel">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

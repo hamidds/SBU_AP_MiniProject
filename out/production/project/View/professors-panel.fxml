@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="577.0" prefWidth="977.0" style="-fx-background-color: #eaeaea;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.professorsPanelController">
+   <children>
+      <AnchorPane layoutX="75.0" layoutY="47.0" prefHeight="445.0" prefWidth="355.0" style="-fx-background-color: #c5c5c5;">
+         <children>
+            <VBox layoutX="14.0" layoutY="212.0" prefHeight="200.0" prefWidth="251.0">
+               <children>
+                  <Label fx:id="nameLabel">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="markLabel">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+                  <Label fx:id="creditLabel">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Label>
+               </children>
+            </VBox>
+            <ImageView fx:id="avatar" fitHeight="150.0" fitWidth="200.0" layoutX="103.0" layoutY="28.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@resources/user.png" />
+               </image>
+            </ImageView>
+         </children>
+      </AnchorPane>
+      <VBox layoutX="701.0" layoutY="117.0" prefHeight="344.0" prefWidth="174.0">
+         <children>
+            <JFXButton fx:id="settingButton" onAction="#settingEnter" prefHeight="110.0" prefWidth="170.0" stylesheets="@Styles/Buttons.css" text=" Setting">
+               <graphic>
+                  <FontAwesomeIconView glyphName="COG" size="50" />
+               </graphic>
+            </JFXButton>
+            <JFXButton onAction="#logout" prefHeight="110.0" prefWidth="170.0" stylesheets="@Styles/Cancel-Buttons.css" text=" Log out">
+               <graphic>
+                  <FontAwesomeIconView glyphName="TIMES_CIRCLE" size="50" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </VBox>
+      <VBox layoutX="527.0" layoutY="117.0" prefHeight="344.0" prefWidth="174.0">
+         <children>
+            <JFXButton fx:id="classesButton" onAction="#ClassSettingsEnter" prefHeight="110.0" prefWidth="170.0" stylesheets="@Styles/Buttons.css" text="Class">
+               <graphic>
+                  <FontAwesomeIconView glyphName="GRADUATION_CAP" size="50" />
+               </graphic>
+            </JFXButton>
+            <JFXButton onAction="#Grades" prefHeight="110.0" prefWidth="170.0" stylesheets="@Styles/Buttons.css" text="Grades">
+               <graphic>
+                  <FontAwesomeIconView glyphName="CLIPBOARD" size="50" />
+               </graphic>
+            </JFXButton>
+         </children>
+      </VBox>
+      <Label layoutX="476.0" layoutY="35.0" text="Profile">
+         <font>
+            <Font size="31.0" />
+         </font>
+      </Label>
+   </children>
+</AnchorPane>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXPasswordField?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import com.jfoenix.controls.JFXToggleButton?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="577.0" prefWidth="977.0" style="-fx-background-color: #eaeaea;" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.LoginController">
+   <children>
+      <AnchorPane fx:id="logIn" layoutX="252.0" layoutY="49.0" prefHeight="448.0" prefWidth="448.0" style="-fx-background-color: #c5c5c5;">
+         <children>
+            <JFXTextField fx:id="username" labelFloat="true" layoutX="39.0" layoutY="56.0" prefHeight="50.0" prefWidth="374.0" promptText="Username" />
+            <JFXPasswordField fx:id="password" labelFloat="true" layoutX="37.0" layoutY="153.0" prefHeight="50.0" prefWidth="374.0" promptText="Password" />
+            <JFXButton fx:id="enterBtn" layoutX="295.0" layoutY="364.0" onAction="#enter" prefHeight="50.0" prefWidth="116.0" style="-fx-background-color: #0366bc;" text="Enter" textFill="WHITE" />
+            <JFXToggleButton fx:id="showPassword" layoutX="334.0" layoutY="224.0" onAction="#showPassword" prefHeight="60.0" prefWidth="43.0" text=" " toggleColor="#1e58b5" toggleLineColor="#91a7ff" />
+            <JFXTextField fx:id="visiblePassword" labelFloat="true" layoutX="37.0" layoutY="153.0" prefHeight="50.0" prefWidth="374.0" promptText="Password" visible="false" />
+            <VBox layoutX="37.0" layoutY="245.0" prefHeight="113.0" prefWidth="117.0">
+               <children>
+                  <JFXRadioButton fx:id="adminRadioButton" prefHeight="38.0" prefWidth="95.0" text="Admin">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="User" />
+                     </toggleGroup>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="professorRadioButton" prefHeight="38.0" prefWidth="95.0" text="Professor" toggleGroup="$User" />
+                  <JFXRadioButton fx:id="studentRadioButton" prefHeight="38.0" prefWidth="95.0" text="Student" toggleGroup="$User" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </VBox>
+            <JFXButton fx:id="accButton" layoutX="37.0" layoutY="370.0" onAction="#signUpPage" prefHeight="38.0" prefWidth="174.0" stylesheets="@Styles/craeteAccount.css" text="Create an account" />
+            <Label fx:id="wrongPassword" layoutX="37.0" layoutY="214.0" text="Wrong Password!" textFill="#ff3232" visible="false" />
+         </children>
+      </AnchorPane>
+      <AnchorPane fx:id="SignUp" layoutX="489.0" layoutY="590.0" prefHeight="448.0" prefWidth="448.0" style="-fx-background-color: #c5c5c5;">
+         <children>
+            <JFXTextField fx:id="firstname" labelFloat="true" layoutX="25.0" layoutY="33.0" prefHeight="50.0" prefWidth="174.0" promptText="First name" />
+            <JFXPasswordField fx:id="signupPassword" labelFloat="true" layoutX="25.0" layoutY="198.0" prefHeight="50.0" prefWidth="174.0" promptText="Password" />
+            <JFXButton fx:id="signupButton" layoutX="295.0" layoutY="364.0" onAction="#signUp" prefHeight="50.0" prefWidth="116.0" style="-fx-background-color: #0366bc;" text="Sign Up" textFill="WHITE" />
+            <JFXTextField fx:id="visiblePassword1" labelFloat="true" layoutX="37.0" layoutY="153.0" prefHeight="50.0" prefWidth="374.0" promptText="Password" visible="false" />
+            <VBox layoutX="37.0" layoutY="287.0" prefHeight="113.0" prefWidth="117.0">
+               <children>
+                  <JFXRadioButton fx:id="professorRadioButton1" prefHeight="38.0" prefWidth="95.0" text="Professor">
+                     <toggleGroup>
+                        <ToggleGroup fx:id="User1" />
+                     </toggleGroup>
+                  </JFXRadioButton>
+                  <JFXRadioButton fx:id="studentRadioButton1" prefHeight="38.0" prefWidth="95.0" text="Student" toggleGroup="$User1" />
+               </children>
+               <opaqueInsets>
+                  <Insets />
+               </opaqueInsets>
+            </VBox>
+            <JFXTextField fx:id="lastname" labelFloat="true" layoutX="224.0" layoutY="33.0" prefHeight="50.0" prefWidth="174.0" promptText="Last name" />
+            <JFXTextField fx:id="signupUsername" labelFloat="true" layoutX="25.0" layoutY="112.0" prefHeight="50.0" prefWidth="374.0" promptText="Username" />
+            <JFXPasswordField fx:id="signupConfirm" labelFloat="true" layoutX="224.0" layoutY="199.0" prefHeight="50.0" prefWidth="174.0" promptText="Confirm" />
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>
